@@ -1,6 +1,6 @@
 # Dotfiles
 
-These are my personal dotfiles for managing my Linux environment and development setup. It includes configuration for various tools like Neovim, Zsh, tmux, and more.
+These are my personal dotfiles for managing my Linux environment and development setup. It includes configuration for various tools like Neovim, Bash, Hyprland and more.
 
 ## Setup
 
