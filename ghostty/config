@@ -1,0 +1,9 @@
+font-family = "JetBrainsMono Nerd Font"
+font-size = 12.0
+
+background = #212122    
+# background = #000000     
+copy-on-select = false 
+window-padding-x = 20
+window-padding-y = 35
+background-opacity = 0.9
