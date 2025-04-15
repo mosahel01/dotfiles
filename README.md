@@ -15,6 +15,7 @@ mv ~/.config/dotfiles/.bashrc ~/
 
 # Apply the new configuration immediately
 source ~/.bashrc
+```
 
 
-
+**IMPORTANT:**  These are primarily meant for inspiration. I wouldn't just blindly use them. Proceed at your own risk!
