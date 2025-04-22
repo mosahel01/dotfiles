@@ -19,13 +19,14 @@ alias ys="yay -S "
 alias yss="yay -Ss "
 alias yrunsc="yay -Runsc "
 
-alias ls='eza -a --icons=always'
-alias ll='eza -al --icons=always'
-alias la='eza -l --icons=always'
+alias ls='eza --icons=always'
+alias ll='eza -l --icons=always'
+alias la='eza -a --icons=always'
 alias lt='eza -a --tree --level=1 --icons=always'
 alias shutdown='systemctl poweroff'
 alias v='$EDITOR'
 alias vim='$EDITOR'
+
 
 alias c="clear"
 alias e="exit"
