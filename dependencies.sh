@@ -17,12 +17,27 @@ CORE_PACKAGES=(
     ripgrep
     fzf
     zoxide
+    less
     jq
     fastfetch
     tree
 
     tmux
     starship
+
+    noto-fonts
+    noto-fonts-cjk
+    noto-fonts-emoji
+    noto-fonts-extra
+    ttf-noto-nerd
+    ttf-jetbrains-mono
+    ttf-jetbrains-mono-nerd
+    ttf-dejavu
+    ttf-dejavu-nerd
+    ttf-fira-code
+    ttf-firacode-nerd
+    ttf-liberation
+    ttf-liberation-mono-nerd
 
     zip
     7zip
@@ -74,6 +89,7 @@ DEV_PACKAGES=(
     gcc
     clang
     python
+    uv
 
     nodejs
     npm
