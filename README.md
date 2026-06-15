@@ -2,7 +2,8 @@
 
 These are my dotfiles.
 
-They exist because I got tired of configuring the same things repeatedly and decided to automate my bad decisions.
+They exist because I got tired of configuring the same things repeatedly,
+so decided to automate my bad decisions.
 
 If something breaks, open an issue. <br>
 If it doesn't break, that's suspicious.
