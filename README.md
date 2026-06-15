@@ -7,6 +7,8 @@ They exist because I got tired of configuring the same things repeatedly and dec
 If something breaks, open an issue. <br>
 If it doesn't break, that's suspicious.
 
+---
+
 ### System Installation
 ```bash
 git clone https://github.com/mosahel01/dotfiles.git ~/.dotfiles
