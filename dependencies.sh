@@ -110,7 +110,8 @@ DEV_PACKAGES=(
 AUR_PACKAGES=(
 	zen-browser-bin
 )
-
+EXISTING_PACKAGES=()
+INSTALLED_PACKAGES=()
 MISSING_PACKAGES=()
 
 install_paru() {
