@@ -1,5 +1,6 @@
 font-family             = 	"JetBrainsMono Nerd Font"
 font-size               = 	14.3
+font-feature		=	+liga
 
 font-style  		= 	"regular"
 font-style-bold  	= 	"bold"
@@ -7,11 +8,11 @@ font-style-italic  	= 	"italic"
 font-style-bold-italic  = 	"bold-italic"
 
 background 		=	"000000"
-background-opactiy 	=	1.00
+background-opacity 	=	1.00
 background-blur		=	false
 
 confirm-close-surface	=	false
-cursor-block		=	block
+cursor-style		=	block
 gtk-titlebar		=	false
 
 font-thicken 		=	true
@@ -19,3 +20,27 @@ adjust-cell-height 	=	2
 
 window-padding-x 	= 	30
 window-padding-y 	= 	30
+
+
+# custom keybinds
+keybind = alt+1=goto_tab:1
+keybind = alt+2=goto_tab:2
+keybind = alt+3=goto_tab:3
+keybind = alt+4=goto_tab:4
+keybind = alt+5=goto_tab:5
+keybind = alt+6=goto_tab:6
+keybind = alt+7=goto_tab:7
+keybind = alt+8=goto_tab:8
+keybind = alt+9=goto_tab:9
+
+keybind = ctrl+shift+enter=new_split:down
+
+keybind = alt+h=goto_split:left
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
+keybind = alt+l=goto_split:right
+
+keybind = ctrl+left=resize_split:left,10
+keybind = ctrl+right=resize_split:right,10
+keybind = ctrl+up=resize_split:up,10
+keybind = ctrl+down=resize_split:down,10
