@@ -1,10 +1,4 @@
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+require("mo.keymaps")
+require("mo.options")
 
-vim.o.number = true
-vim.o.relativenumber = true
-vim.o.clipboard = "unnamedplus"
-
-vim.cmd.colorscheme("catppuccin")
-
-vim.keymap.set("n", "-", vim.cmd.Ex)
+require("mo.lazy")
