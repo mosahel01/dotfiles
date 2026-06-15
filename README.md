@@ -1,6 +1,4 @@
-Hello, world!
----
----
+# Hello, world!
 
 These are my dotfiles.
 
