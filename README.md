@@ -1,3 +1,7 @@
+Hello, world!
+---
+---
+
 These are my dotfiles.
 
 They exist because I got tired of configuring the same things repeatedly, <br>
