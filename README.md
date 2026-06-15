@@ -7,17 +7,17 @@ They exist because I got tired of configuring the same things repeatedly and dec
 If something breaks, open an issue. <br>
 If it doesn't break, that's suspicious.
 
-## System Installation
+### System Installation
 ```bash
 git clone https://github.com/mosahel01/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install.sh
 ```
 
-## Archlinux Dependencies 
+### Archlinux Dependencies 
 ```bash
 cd ~/.dotfiles
 ./dependencies.sh
 ```
-## Disclaimer
+### Disclaimer
 Works on my machine™.
