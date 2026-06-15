@@ -4,17 +4,17 @@ These are my dotfiles.
 
 They exist because I got tired of configuring the same things repeatedly and decided to automate my bad decisions.
 
-If something breaks, open an issue.
+If something breaks, open an issue. <br>
 If it doesn't break, that's suspicious.
 
-## Install
+## System Installation
 ```bash
 git clone https://github.com/mosahel01/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install.sh
 ```
 
-## Arch Linux Dependencies
+## Archlinux Dependencies 
 ```bash
 cd ~/.dotfiles
 ./dependencies.sh
