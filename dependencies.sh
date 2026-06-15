@@ -13,6 +13,7 @@ CORE_PACKAGES=(
     fd
     eza
     bat
+    btop
     ripgrep
     fzf
     zoxide
@@ -24,6 +25,7 @@ CORE_PACKAGES=(
     starship
 
     zip
+    7zip
     unzip
 
     yazi
@@ -50,6 +52,7 @@ HYPRLAND_PACKAGES=(
 
     waybar
     rofi
+    dunst
 
     wl-clipboard
     cliphist
@@ -129,18 +132,21 @@ install_package() {
 
 	if pacman -Qi "$pkg" >/dev/null 2>&1; then
 		echo "✓ $pkg already installed"
+		EXISTING_PACKAGES+=("$pkg")
 		return
 	fi
 
 	if pacman -Si "$pkg" >/dev/null 2>&1; then
 		sudo pacman -S --needed --noconfirm "$pkg"
 		echo "✓ $pkg installed via pacman"
+		INSTALLED_PACKAGES+=("$pkg")
 		return
 	fi
 
 	if paru -Si "$pkg" >/dev/null 2>&1; then
 		paru -S --needed --noconfirm "$pkg"
 		echo "✓ $pkg installed via AUR"
+		INSTALLED_PACKAGES+=("$pkg")
 		return
 	fi
 
@@ -152,6 +158,8 @@ install_group() {
 	local name="$1"
 	shift
 
+	[[ $# -eq 0 ]] && return
+
 	echo
 	echo "Installing $name..."
 
@@ -160,49 +168,94 @@ install_group() {
 	done
 }
 
-main() 
-{
-	sudo pacman -Sy
-
+__main() {
 	install_paru
 
 	echo
-	echo "Installing core packages..."
+	echo "Updating package databases..."
+	sudo pacman -Sy
 
-	for pkg in "${CORE_PACKAGES[@]}"; do
-		install_package "$pkg"
-	done
-
-	echo
-	echo "Installing Hyprland packages..."
-
-	for pkg in "${HYPRLAND_PACKAGES[@]}"; do
-	    install_package "$pkg"
-	done
-
-	echo
-	echo "Installing development packages..."
-
-	for pkg in "${DEV_PACKAGES[@]}"; do
-		install_package "$pkg"
-	done
-
-	echo
-	echo "Installing AUR packages..."
-
-	for pkg in "${AUR_PACKAGES[@]}"; do
-		install_package "$pkg"
-	done
+	install_group "core packages" "${CORE_PACKAGES[@]}"
+	install_group "Hyprland packages" "${HYPRLAND_PACKAGES[@]}"
+	install_group "development packages" "${DEV_PACKAGES[@]}"
+	install_group "AUR packages" "${AUR_PACKAGES[@]}"
 
 	echo
 	echo "========================"
+	echo "Summary"
+	echo "========================"
+
+	echo
+	echo "Already Exists (${#EXISTING_PACKAGES[@]}):"
+
+	if [[ ${#EXISTING_PACKAGES[@]} -eq 0 ]]; then
+		echo "  None"
+	else
+		printf '  - %s\n' "${EXISTING_PACKAGES[@]}"
+	fi
+
+	echo
+	echo "Fresh Installed (${#INSTALLED_PACKAGES[@]}):"
+
+	if [[ ${#INSTALLED_PACKAGES[@]} -eq 0 ]]; then
+		echo "  None"
+	else
+		printf '  - %s\n' "${INSTALLED_PACKAGES[@]}"
+	fi
+
+	echo
+	echo "Missing Packages (${#MISSING_PACKAGES[@]}):"
 
 	if [[ ${#MISSING_PACKAGES[@]} -eq 0 ]]; then
-		echo "✓ All packages installed"
+		echo "  None"
 	else
-		echo "Missing packages:"
 		printf '  - %s\n' "${MISSING_PACKAGES[@]}"
 	fi
 }
 
-main
+# __main() 
+# {
+# 	sudo pacman -Sy
+#
+# 	install_paru
+#
+# 	echo
+# 	echo "Installing core packages..."
+#
+# 	for pkg in "${CORE_PACKAGES[@]}"; do
+# 		install_package "$pkg"
+# 	done
+#
+# 	echo
+# 	echo "Installing Hyprland packages..."
+#
+# 	for pkg in "${HYPRLAND_PACKAGES[@]}"; do
+# 	    install_package "$pkg"
+# 	done
+#
+# 	echo
+# 	echo "Installing development packages..."
+#
+# 	for pkg in "${DEV_PACKAGES[@]}"; do
+# 		install_package "$pkg"
+# 	done
+#
+# 	echo
+# 	echo "Installing AUR packages..."
+#
+# 	for pkg in "${AUR_PACKAGES[@]}"; do
+# 		install_package "$pkg"
+# 	done
+#
+# 	echo
+# 	echo "========================"
+#
+# 	if [[ ${#MISSING_PACKAGES[@]} -eq 0 ]]; then
+# 		echo "✓ All packages installed"
+# 	else
+# 		echo "Missing packages:"
+# 		printf '  - %s\n' "${MISSING_PACKAGES[@]}"
+# 	fi
+# }
+
+__main
