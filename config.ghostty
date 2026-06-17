@@ -1,26 +1,26 @@
-# font-family       = 	"JetBrainsMono Nerd Font"
-font-family         =   "TX-02"
-font-size           = 	14.3
-font-feature		=	+liga
+font-family             = 	"JetBrainsMono Nerd Font"
+font-family             =  "TX-02"
+font-size               = 	14.3
+font-feature	        =	+liga
 
-font-style  		= 	"regular"
-font-style-bold  	= 	"bold"
-font-style-italic  	= 	"italic"
+font-style  	        = 	"regular"
+font-style-bold         = 	"bold"
+font-style-italic       = 	"italic"
 font-style-bold-italic  = 	"bold-italic"
 
-background 		=	"000000"
-background-opacity 	=	1.00
-background-blur		=	false
+background 		        =	"000000"
+background-opacity 	    =	1.00
+background-blur		    =	false
 
 confirm-close-surface	=	false
-cursor-style		=	block
-gtk-titlebar		=	false
+cursor-style		    =	block
+gtk-titlebar		    =	false
 
-font-thicken 		=	true
-adjust-cell-height 	=	2
+font-thicken 		    =	false
+adjust-cell-height 	    =	3
 
-window-padding-x 	= 	30
-window-padding-y 	= 	30
+window-padding-x 	    = 	30
+window-padding-y 	    = 	30
 
 
 # custom keybinds
