@@ -6,6 +6,7 @@ CORE_PACKAGES=(
     git
     zsh
     neovim
+    alacritty
     ghostty
     discord
     bitwarden
@@ -109,6 +110,8 @@ DEV_PACKAGES=(
 
 AUR_PACKAGES=(
 	zen-browser-bin
+    brave-bin
+    pycharm
 )
 EXISTING_PACKAGES=()
 INSTALLED_PACKAGES=()
