@@ -1,29 +1,27 @@
-font-family             = 	"JetBrainsMono Nerd Font"
-font-family             =  "TX-02"
-font-size               = 	14.3
-font-feature	        =	+liga
+font-family = "JetBrainsMono Nerd Font"
+font-size = 13.0
+font-feature = "+liga"
 
-font-style  	        = 	"regular"
-font-style-bold         = 	"bold"
-font-style-italic       = 	"italic"
-font-style-bold-italic  = 	"bold-italic"
+font-style = "regular"
+font-style-bold = "bold"
+font-style-italic = "italic"
+font-style-bold-italic = "bold"
 
-background 		        =	"000000"
-background-opacity 	    =	1.00
-background-blur		    =	false
+background = "#000000"
+background-opacity = 0.90
+background-blur = true
 
-confirm-close-surface	=	false
-cursor-style		    =	block
-gtk-titlebar		    =	false
+confirm-close-surface = false
+cursor-style = block
+gtk-titlebar = false
 
-font-thicken 		    =	false
-adjust-cell-height 	    =	3
+font-thicken = false
+adjust-cell-height = 2
 
-window-padding-x 	    = 	30
-window-padding-y 	    = 	30
+window-padding-x = 0
+window-padding-y = 0
+# window-padding-color = extend-always
 
-
-# custom keybinds
 keybind = alt+1=goto_tab:1
 keybind = alt+2=goto_tab:2
 keybind = alt+3=goto_tab:3
@@ -45,3 +43,16 @@ keybind = ctrl+left=resize_split:left,10
 keybind = ctrl+right=resize_split:right,10
 keybind = ctrl+up=resize_split:up,10
 keybind = ctrl+down=resize_split:down,10
+
+
+
+
+
+
+
+
+
+
+
+
+
