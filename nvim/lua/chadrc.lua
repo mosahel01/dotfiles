@@ -6,10 +6,10 @@
 local M = {}
 
 M.base46 = {
-    theme = "rosepine",
+    theme = "onedark",
     theme_toggle = {
-      "rosepine",
-      "rosepine-dawn",
+      "vscode_dark",
+      "onedark",
     },
     transparency = false,
 
@@ -27,3 +27,4 @@ M.ui = {
 }
 
 return M
+

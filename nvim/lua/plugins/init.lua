@@ -13,7 +13,6 @@ return {
         end,
     },
 
-
     {
         "kylechui/nvim-surround",
         event = { "BufReadPre", "BufNewFile" },
