@@ -8,8 +8,8 @@ local M = {}
 M.base46 = {
     theme = "onedark",
     theme_toggle = {
-      "vscode_dark",
-      "onedark",
+        "one_light",
+        "onedark",
     },
     transparency = false,
 
@@ -27,4 +27,3 @@ M.ui = {
 }
 
 return M
-
