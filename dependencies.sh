@@ -6,10 +6,13 @@ CORE_PACKAGES=(
     git
     zsh
     neovim
+    firefox
     alacritty
     ghostty
     discord
     bitwarden
+
+    trash-cli
 
     fd
     eza
@@ -52,10 +55,10 @@ CORE_PACKAGES=(
     network-manager-applet
     openssh
 
-    pipewire
-    pipewire-pulse
-    pipewire-alsa
-    wireplumber
+    #pipewire
+    #pipewire-pulse
+    #pipewire-alsa
+    #wireplumber
     pavucontrol
 )
 
@@ -109,9 +112,10 @@ DEV_PACKAGES=(
 )
 
 AUR_PACKAGES=(
-	zen-browser-bin
+    zen-browser-bin
     brave-bin
     pycharm
+    visual-studio-code-bin
 )
 EXISTING_PACKAGES=()
 INSTALLED_PACKAGES=()
