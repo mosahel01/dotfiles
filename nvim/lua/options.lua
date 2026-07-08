@@ -6,3 +6,4 @@ local o = vim.opt
 -- o.cursorlineopt = "both" -- to enable cursorline!
 o.relativenumber = true
 o.wrap = false
+o.shiftwidth = 4

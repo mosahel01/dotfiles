@@ -6,10 +6,10 @@
 local M = {}
 
 M.base46 = {
-    theme = "onedark",
+    theme = "jellybeans",
     theme_toggle = {
         "one_light",
-        "onedark",
+        "jellybeans",
     },
     transparency = false,
 
