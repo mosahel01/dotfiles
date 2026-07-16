@@ -1,0 +1,69 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "edit_predictions": {
+    "allow_data_collection": "no"
+  },
+  "mouse_wheel_zoom": true,
+  "debugger": {
+    "button": false,
+    "dock": "left"
+  },
+  "outline_panel": {
+    "button": false,
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "git_panel": {
+    "button": false,
+    "dock": "right"
+  },
+  "cli_default_open_behavior": "existing_window",
+  "vim": {
+    "cursor_shape": {
+      "normal": "hollow"
+    },
+    "highlight_on_yank_duration": 75,
+    "use_smartcase_find": true,
+    "toggle_relative_line_numbers": true
+  },
+  "toolbar": {
+    "code_actions": true,
+    "agent_review": false,
+    "selections_menu": true,
+    "quick_actions": true,
+    "breadcrumbs": true
+  },
+  "rounded_selection": true,
+  "current_line_highlight": "all",
+  "cursor_shape": "hollow",
+  "buffer_font_weight": 400.0,
+  "buffer_font_family": ".ZedMono",
+  "disable_ai": true,
+  "proxy": "",
+  "prettier": {
+    "allowed": true
+  },
+  "base_keymap": "JetBrains",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "vim_mode": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 16.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark"
+  },
+}
