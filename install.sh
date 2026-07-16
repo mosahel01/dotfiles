@@ -29,6 +29,10 @@ echo "Installing Dotfiles..."
 # ln -sfn "$DOTFILES/nvim" "$HOME/.config/nvim"
 # echo "✓ symlinked neovim"
 
+# neovim
+ln -sfn "$DOTFILES/zed" "$HOME/.config/zed"
+echo "✓ symlinked zed editor"
+
 # fonts
 mkdir -p "$HOME/.config/fontconfig"
 ln -sfn "$DOTFILES/fonts.conf" "$HOME/.config/fontconfig/fonts.conf"
