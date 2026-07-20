@@ -1,21 +1,23 @@
 [font]
-size = 14.3
-offset = { x = 0, y = 0 } # x: line spacing, y: letter spacing
+size = 13.3
+offset = { x = -1, y = 1 } # x: line spacing, y: letter spacing
+
+# JetBrainsMono Nerd Font
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "Berkeley Mono Nerd Font"
 style = "Regular"
 
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+family = "Berkeley Mono Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "JetBrainsMono Nerd Font"
+family = "Berkeley Mono Nerd Font"
 style = "italic"
 
 [font.bold_italic]
-family = "JetBrainsMono Nerd Font"
+family = "Berkeley Mono Nerd Font"
 style = "bold_italic"
 
 [window.padding] 
@@ -27,7 +29,7 @@ save_to_clipboard = true
 
 [colors.primary]
 background = "#000000"
-# foreground = "#ffffff"
+foreground = "#ffffff"
 
 
 [scrolling]
@@ -38,13 +40,13 @@ multiplier = 10
 TERM = "xterm-256color"
 
 # [window]
-# opacity = 0.85 transparency is dumb!
+# opacity = 0.80  
 # blur = true
 
 # [keyboard]
-# bindings = {
+# bindings = [
 #     { key = "C", mods = "Control", action = "Copy" },
 #     { key = "V", mods = "Control", action = "Paste" },
 #     { key = "C", mods = "Control|Shift", chars = "\u0003"},
-# }
+# ]
 
