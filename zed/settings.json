@@ -7,11 +7,24 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "title_bar": {
+    "show_branch_status_icon": false
+  },
+  "tab_bar": {
+    "show_pinned_tabs_in_separate_row": false
+  },
+  "markdown_preview_code_font_family": "BerkeleyMono Nerd Font",
+  "markdown_preview_font_family": "Ubuntu",
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Colored Zed Icons Theme Dark"
+  },
   "colorize_brackets": true,
   "edit_predictions": {
     "allow_data_collection": "no"
   },
-  "mouse_wheel_zoom": true,
+  "mouse_wheel_zoom": false,
   "debugger": {
     "button": false,
     "dock": "left"
@@ -47,7 +60,7 @@
   "current_line_highlight": "all",
   "cursor_shape": "hollow",
   "buffer_font_weight": 400.0,
-  "buffer_font_family": ".ZedMono",
+  "buffer_font_family": "BerkeleyMono Nerd Font",
   "disable_ai": true,
   "proxy": "",
   "prettier": {
@@ -60,10 +73,10 @@
     "anthropic_retention": false
   },
   "vim_mode": true,
-  "ui_font_size": 16,
+  "ui_font_size": 16.0,
   "buffer_font_size": 16.0,
   "theme": {
-    "mode": "dark",
+    "mode": "system",
     "light": "One Light",
     "dark": "One Dark"
   },
