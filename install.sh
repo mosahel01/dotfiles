@@ -12,9 +12,9 @@ echo "Installing Dotfiles..."
 # echo "✓ symlinked ghostty"
 
 # # alacritty
-# mkdir -p "$HOME/.config/alacritty"
-# ln -sfn "$DOTFILES/alacritty.toml" "$HOME/.config/alacritty/alacritty.toml"
-# echo "✓ symlinked alacritty"
+mkdir -p "$HOME/.config/alacritty"
+ln -sfn "$DOTFILES/alacritty.toml" "$HOME/.config/alacritty/alacritty.toml"
+echo "✓ symlinked alacritty"
 
 # # niri
 # mkdir -p "$HOME/.config/niri"
@@ -29,9 +29,9 @@ echo "Installing Dotfiles..."
 # ln -sfn "$DOTFILES/nvim" "$HOME/.config/nvim"
 # echo "✓ symlinked neovim"
 
-# neovim
-ln -sfn "$DOTFILES/zed" "$HOME/.config/zed"
-echo "✓ symlinked zed editor"
+# # zed editor
+# ln -sfn "$DOTFILES/zed" "$HOME/.config/zed"
+# echo "✓ symlinked zed editor"
 
 # fonts
 mkdir -p "$HOME/.config/fontconfig"
