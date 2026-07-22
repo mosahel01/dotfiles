@@ -9,6 +9,7 @@ declare -a __archlinux_deps=(
     "which"
     "bat"
     "tmux"
+	"starship" # important
 )
 
 declare -a __plugins=(

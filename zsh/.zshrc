@@ -1,10 +1,11 @@
 # --- environment & paths ---
-export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
-export GOPATH="$HOME/.go"
-export PATH="$HOME/.go/bin:$PATH"
-export TERM="xterm-256color"
 export EDITOR="nvim"
-export GROFF_NO_SGR=1
+export SUDO_EDITOR="nvim"
+export TERM="xterm-256color"
+export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
+# export GOPATH="$HOME/.go"
+# export PATH="$HOME/.go/bin:$PATH"
+# export GROFF_NO_SGR=1
 
 # --- xdg & config ---
 xdg_config_dir="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
@@ -58,8 +59,3 @@ source "$xdg_config_dir/functions.zsh"
 source "$xdg_config_dir/.plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # . "$HOME/.local/share/../bin/env" 
-
-# ---------------Java----------------
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-# export SDKMAN_DIR="$HOME/.sdkman"
-# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
