@@ -21,13 +21,13 @@ echo "✓ symlinked alacritty"
 # ln -sfn "$DOTFILES/config.niri" "$HOME/.config/niri/config.kdl"
 # echo "✓ symlinked niri"
 
-# # zsh
-# ln -sfn "$DOTFILES/zsh" "$HOME/.config/zsh"
-# echo "✓ symlinked zsh"
+# zsh
+ln -sfn "$DOTFILES/zsh" "$HOME/.config/zsh"
+echo "✓ symlinked zsh"
 
-# # neovim
-# ln -sfn "$DOTFILES/nvim" "$HOME/.config/nvim"
-# echo "✓ symlinked neovim"
+# neovim
+ln -sfn "$DOTFILES/nvim" "$HOME/.config/nvim"
+echo "✓ symlinked neovim"
 
 # # zed editor
 # ln -sfn "$DOTFILES/zed" "$HOME/.config/zed"
