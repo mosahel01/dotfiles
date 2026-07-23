@@ -56,6 +56,15 @@
       "rev": "154eb5ff5b96d0641307113fa385eaf0d36d9796",
       "src": "https://github.com/ellisonleao/gruvbox.nvim"
     },
+    "harpoon": {
+      "rev": "87b1a3506211538f460786c23f98ec63ad9af4e5",
+      "src": "https://github.com/ThePrimeagen/harpoon",
+      "version": "'harpoon2'"
+    },
+    "jensen_vscode": {
+      "rev": "7c62f10536d71c16384871574e2b5dc3456bd945",
+      "src": "https://github.com/jensenr30/vscode.nvim"
+    },
     "kanagawa.nvim": {
       "rev": "bb85e4bfc8d89b0e62c8fa53ccdd13d12e2f77b3",
       "src": "https://github.com/rebelot/kanagawa.nvim"
@@ -92,6 +101,14 @@
       "rev": "7248feaca45e4d944591497964bc19afa89ad1c6",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
+    "nvim-web-devicons": {
+      "rev": "0ca28b61a04fe7426cefbdd52c2647ef0e335b5f",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "nvimtree": {
+      "rev": "4213bd6eabac38b16dd6615002b6243b23cf3bf6",
+      "src": "https://github.com/nvim-tree/nvim-tree.lua"
+    },
     "oil.nvim": {
       "rev": "b73018b75affd13fa38e2fc94ef753b465f770d7",
       "src": "https://github.com/stevearc/oil.nvim"
@@ -123,6 +140,10 @@
     "visual_studio_code": {
       "rev": "ff7fd467e6c82bd1e062d64f60428cf36b0e99c6",
       "src": "https://github.com/askfiy/visual_studio_code"
+    },
+    "vscode": {
+      "rev": "aa1102a7e15195c9cca22730b09224a7f7745ba8",
+      "src": "https://github.com/mofiqul/vscode.nvim"
     },
     "vscode.nvim": {
       "rev": "aa1102a7e15195c9cca22730b09224a7f7745ba8",

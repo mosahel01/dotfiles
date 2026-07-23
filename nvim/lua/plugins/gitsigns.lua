@@ -1,5 +1,5 @@
 vim.pack.add({
-    { src = "https://github.com/lewis6991/gitsigns.nvim" },
+	{ src = "https://github.com/lewis6991/gitsigns.nvim" },
 })
 
-require("gitsigns").setup()
+require("gitsigns").setup({})

@@ -18,7 +18,7 @@ style = "italic"
 family = "JetBrainsMono Nerd Font"
 style = "bold_italic"
 
-[window.padding] 
+[window.padding]
 x = 0
 y = 0
 
