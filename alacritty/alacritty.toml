@@ -1,21 +1,21 @@
 [font]
 size = 15.0
-offset = { x = -1, y = 1 } # x: line spacing, y: letter spacing
+# offset = { x = -1, y = 1 } # x: line spacing, y: letter spacing
 
 [font.normal]
-family = "Comic Code"
+family = "Iosevka NF"
 style = "Regular"
 
 [font.bold]
-family = "Comic Code"
+family = "Iosevka NF"
 style = "Bold"
 
 [font.italic]
-family = "Comic Code"
+family = "Iosevka NF"
 style = "Italic"
 
 [font.bold_italic]
-family = "Comic Code"
+family = "Iosevka NF"
 style = "bold_italic"
 
 [window]
