@@ -3,19 +3,19 @@ size = 15.0
 # offset = { x = -1, y = 1 } # x: line spacing, y: letter spacing
 
 [font.normal]
-family = "Iosevka NF"
+family = "Iosevka Curly"
 style = "Regular"
 
 [font.bold]
-family = "Iosevka NF"
+family = "Iosevka Curly"
 style = "Bold"
 
 [font.italic]
-family = "Iosevka NF"
+family = "Iosevka Curly"
 style = "Italic"
 
 [font.bold_italic]
-family = "Iosevka NF"
+family = "Iosevka Curly"
 style = "bold_italic"
 
 [window]
