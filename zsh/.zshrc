@@ -2,11 +2,8 @@
 export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
-export PATH=$PATH:$HOME/.local/opt/go/bin
+export PATH="$HOME/.go/bin:$PATH"
 export PYTHONDONTWRITEBYTECODE=1
-# export GOPATH="$HOME/.go"
-# export PATH="$HOME/.go/bin:$PATH"
-# export GROFF_NO_SGR=1
 
 # --- xdg & config ---
 xdg_config_dir="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
