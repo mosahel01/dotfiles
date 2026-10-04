@@ -54,8 +54,8 @@ bindsym $mod+v exec copyq toggle
 bindsym Print exec flameshot gui
 
 # start a terminal
-# bindsym $mod+Return exec alacritty
-bindsym $mod+Return exec ghostty
+bindsym $mod+Return exec alacritty
+# bindsym $mod+Return exec ghostty
 
 # kill focused window
 bindsym $mod+q kill
