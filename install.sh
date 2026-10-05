@@ -11,7 +11,7 @@ echo "Installing Dotfiles..."
 # ln -sfn "$DOTFILES/alacritty.toml" "$HOME/.config/alacritty/alacritty.toml"
 # echo "✓ symlinked alacritty"
 
-# zsh
+# alacritty
 ln -sfn "$DOTFILES/alacritty/" "$HOME/.config/"
 echo "✓ symlinked alacritty"
 
@@ -27,9 +27,13 @@ echo "✓ symlinked i3"
 ln -sfn "$DOTFILES/zsh" "$HOME/.config/zsh"
 echo "✓ symlinked zsh"
 
+# layout
+ln -sfn "$DOTFILES/xorg-layout.sh" "$HOME/.screenlayout/xorg-layout.sh"
+echo "✓ symlinked xorg-layout"
+
 # tmux
-ln -sfn "$DOTFILES/.tmux.conf" "$HOME/.tmux.conf"
-echo "✓ symlinked tmux"
+# ln -sfn "$DOTFILES/.tmux.conf" "$HOME/.tmux.conf"
+# echo "✓ symlinked tmux"
 
 # fonts
 mkdir -p "$HOME/.config/fontconfig"
