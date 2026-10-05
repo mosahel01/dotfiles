@@ -13,6 +13,7 @@ o.softtabstop = 4
 o.number = true
 o.wrap = false
 
-o.laststatus = 0
-o.cmdheight = 0
+-- o.laststatus = 0
+-- o.cmdheight = 0
+
 
