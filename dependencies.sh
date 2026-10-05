@@ -106,7 +106,7 @@ DEV_PACKAGES=(
     # bash-language-server
     # yaml-language-server
 
-    tree-sitter
+    tree-sitter-cli
     # shellcheck
     # shfmt
 )
