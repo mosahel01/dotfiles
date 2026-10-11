@@ -13,6 +13,18 @@ return {
         end,
     },
 
+    {
+        "Wansmer/treesj",
+        keys = {
+            { "<leader>tt", "<cmd>TSJToggle<cr>", desc = "Toggle split/join code block" },
+        },
+        dependencies = { "nvim-treesitter/nvim-treesitter" },
+        opts = {
+            use_default_keymaps = false,
+            max_join_indent_length = 120,
+        },
+    },
+
     -- test new blink
     { import = "nvchad.blink.lazyspec" },
 
@@ -25,6 +37,12 @@ return {
                 "vimdoc",
                 "html",
                 "css",
+                "javascript",
+                "typescript",
+                "tsx",
+                "jsdoc",
+                "json",
+                "jsonc",
             },
         },
     },
