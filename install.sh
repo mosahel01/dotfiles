@@ -20,16 +20,16 @@ ln -sfn "$DOTFILES/nvim" "$HOME/.config/nvim"
 echo "✓ symlinked nvim"
 
 # i3
-ln -sfn "$DOTFILES/i3" "$HOME/.config/i3"
-echo "✓ symlinked i3"
+# ln -sfn "$DOTFILES/i3" "$HOME/.config/i3"
+# echo "✓ symlinked i3"
 
 # zsh
 ln -sfn "$DOTFILES/zsh" "$HOME/.config/zsh"
 echo "✓ symlinked zsh"
 
 # layout
-ln -sfn "$DOTFILES/xorg-layout.sh" "$HOME/.screenlayout/xorg-layout.sh"
-echo "✓ symlinked xorg-layout"
+# ln -sfn "$DOTFILES/xorg-layout.sh" "$HOME/.screenlayout/xorg-layout.sh"
+# echo "✓ symlinked xorg-layout"
 
 # tmux
 # ln -sfn "$DOTFILES/.tmux.conf" "$HOME/.tmux.conf"
