@@ -37,10 +37,8 @@ function install() {
 
     detect_distro
 
-    # Uncomment the line below if running on Arch Linux
-    # install_arch_deps
-
-    install_debian_deps
+    install_arch_deps
+    # install_debian_deps
     clone_plugins
     symlink_zshrc
     set_default_shell

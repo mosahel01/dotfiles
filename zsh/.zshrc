@@ -2,7 +2,7 @@
 export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
-export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/.go/bin:$PATH"
 export PYTHONDONTWRITEBYTECODE=1
 
 # --- xdg & config ---
@@ -77,13 +77,5 @@ source "$xdg_config_dir/.plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 # [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 # For NVM zsh support on ARCHLINUX.
-# source /usr/share/nvm/init-nvm.sh
-
-# For NVM zsh support on DEBIAN.
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
-# Enable bash completion compatibility for zsh
-autoload -U +X bashcompinit && bashcompinit
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+source /usr/share/nvm/init-nvm.sh
 
