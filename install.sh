@@ -19,6 +19,14 @@ echo "✓ symlinked alacritty"
 ln -sfn "$DOTFILES/nvim" "$HOME/.config/nvim"
 echo "✓ symlinked nvim"
 
+# hypr
+ln -sfn "$DOTFILES/hypr" "$HOME/.config/hypr"
+echo "✓ symlinked hyprland"
+
+# quickshell
+ln -sfn "$DOTFILES/quickshell" "$HOME/.config/quickshell"
+echo "✓ symlinked quickshell"
+
 # i3
 # ln -sfn "$DOTFILES/i3" "$HOME/.config/i3"
 # echo "✓ symlinked i3"
