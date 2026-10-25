@@ -41,7 +41,7 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal = "alacritty"
+local terminal = "kitty"
 local fileManager = "nautilus"
 local menu = "rofi -show drun"
 
@@ -58,10 +58,14 @@ hl.on("hyprland.start", function()
 	-- hl.exec_cmd(terminal)
 	hl.exec_cmd("nm-applet")
 	hl.exec_cmd("waybar")
+	hl.exec_cmd("flameshot")
+	hl.exec_cmd("hyprpaper")
 	hl.exec_cmd("systemctl --user start polkit-kde-agent-1")
 	hl.exec_cmd("/usr/lib/polkit-kde-authentication-agent-1")
     hl.exec_cmd("wl-paste --type image --watch cliphist store")
     hl.exec_cmd("wl-paste --type text --watch cliphist store")
+    hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+
 end)
 
 -------------------------------
@@ -70,15 +74,18 @@ end)
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
-hl.env("XCURSOR_SIZE", "24")
+hl.env("CLUTTER_BACKEND", "wayland")
+hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+hl.env("GBM_BACKEND", "nvidia-drm")
 hl.env("HYPRCURSOR_SIZE", "24")
 hl.env("LIBVA_DRIVER_NAME", "nvidia")
+hl.env("SDL_VIDEODRIVER", "wayland")
+hl.env("WLR_NO_HARDWARE_CURSORS", "1")
+hl.env("XCURSOR_SIZE", "24")
 hl.env("XDG_SESSION_TYPE", "wayland")
-hl.env("GBM_BACKEND", "nvidia-drm")
+hl.env("_JAVA_AWT_WM_NONREPARENTING", "1")
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
-hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
--- hl.
--- -- hl.# O("onal: Helps with Electron/Chromium app flickering (Discord, VS Code, Obsidian)
+hl.env("NVD_BACKEND", "direct")
 
 -----------------------
 ----- PERMISSIONS -----
@@ -181,6 +188,11 @@ hl.animation({ leaf = "workspaces", enabled = true, speed = 1.94, bezier = "almo
 hl.animation({ leaf = "workspacesIn", enabled = true, speed = 1.21, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "workspacesOut", enabled = true, speed = 1.94, bezier = "almostLinear", style = "fade" })
 hl.animation({ leaf = "zoomFactor", enabled = true, speed = 7, bezier = "quick" })
+
+hl.workspace_rule({ workspace="1",monitor="HDMI-A-1", default = true})
+hl.workspace_rule({ workspace="2",monitor="HDMI-A-1"})
+hl.workspace_rule({ workspace="3",monitor="HDMI-A-1"})
+hl.workspace_rule({ workspace="4",monitor="HDMI-A-1"})
 
 -- Ref https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 -- "Smart gaps" / "No gaps when only"
@@ -286,6 +298,10 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- 	mainMod .. " + M",
 -- 	hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 -- )
+
+hl.bind(" + Print", hl.dsp.exec_cmd("flameshot gui "))
+hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("flameshot gui --path ~/Pictures/Screenshots"))
+
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
 hl.bind(mainMod .. " + ALT + M", hl.dsp.window.float({ action = "toggle" }))
@@ -425,3 +441,4 @@ hl.window_rule({
 	move = "20 monitor_h-120",
 	float = true,
 })
+
