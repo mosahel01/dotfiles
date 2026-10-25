@@ -23,6 +23,10 @@ echo "✓ symlinked nvim"
 ln -sfn "$DOTFILES/hypr" "$HOME/.config/hypr"
 echo "✓ symlinked hyprland"
 
+# niri
+ln -sfn "$DOTFILES/niri" "$HOME/.config/niri"
+echo "✓ symlinked niri"
+
 # quickshell
 ln -sfn "$DOTFILES/quickshell" "$HOME/.config/quickshell"
 echo "✓ symlinked quickshell"
