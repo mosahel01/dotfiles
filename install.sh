@@ -23,6 +23,10 @@ echo "✓ symlinked fontconfig"
 # ln -sfn "$DOTFILES/i3" "$HOME/.config/i3"
 # echo "✓ symlinked i3"
 
+# kitty
+ln -sfn "$DOTFILES/kitty" "$HOME/.config/kitty"
+echo "✓ symlinked kitty"
+
 # layout
 # ln -sfn "$DOTFILES/xorg-layout.sh" "$HOME/.screenlayout/xorg-layout.sh"
 # echo "✓ symlinked xorg-layout"
