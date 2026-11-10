@@ -1,0 +1,24 @@
+{
+  "$schema": "https://opencode.ai/v2/cli.json",
+  "session": {
+    "sidebar": "hide",
+    "scrollbar": false,
+    "markdown": "rendered",
+    "verbosity": "low",
+    "thinking": "hide"
+  },
+  "theme": {
+    "mode": "system",
+    "name": "system"
+  },
+  "animations": true,
+  "tabs": {
+    "layout": "horizontal"
+  },
+  "scroll": {
+    "acceleration": false
+  },
+  "prompt": {
+    "image_preview": true
+  }
+}

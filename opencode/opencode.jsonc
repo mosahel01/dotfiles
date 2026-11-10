@@ -1,0 +1,96 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugins": [],
+  "compaction": {
+    "buffer": "30%",
+  },
+  "mcp": {
+    "servers": {
+      "context7": {
+        "type": "remote",
+        "url": "https://mcp.context7.com/mcp/",
+      },
+      "chrome-devtools": {
+        "type": "local",
+        "command": [
+          "npx",
+          "-y",
+          "chrome-devtools-mcp@latest",
+          "--headless",
+          "--no-usage-statistics",
+          "--executablePath",
+          "/Users/kanan2003/.chrome-for-testing/chrome/mac_arm-155.0.8059.79/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+        ],
+      },
+      // // search engines
+      // "firecrawl": {
+      //   "type": "remote",
+      //   "url": "https://mcp.firecrawl.dev/v2/mcp-oauth",
+      // },
+      // "tavily": {
+      //   "type": "remote",
+      //   "url": "https://mcp.tavily.com/mcp/",
+      // },
+      // "exa": {
+      //   "type": "remote",
+      //   "url": "https://mcp.exa.ai/mcp",
+      // },
+      // "searchcode": {
+      //   "type": "remote",
+      //   "url": "https://api.searchcode.com/v1/mcp",
+      // },
+    },
+  },
+
+  // The base policy already allows everything. The only thing worth configuring
+  // is the edge: one boundary, then the few external roots that are free.
+  "permissions": [
+    // Last match wins: deny outside, then allow scratch and OpenCode's own dirs.
+    { "action": "external_directory", "resource": "*", "effect": "deny" },
+
+    // /tmp is the scratch root on both platforms: on Linux it is the directory
+    // itself, on macOS it links to /private/tmp and the root is realpath'd.
+    { "action": "external_directory", "resource": "/tmp/*", "effect": "allow" },
+
+    // macOS puts $TMPDIR under /private/var/folders/<2>/<hash>/T. Inert on Linux,
+    // kept so this config still works on a Mac. Literal, so it cannot widen to
+    // /private* when TMPDIR is unset.
+    {
+      "action": "external_directory",
+      "resource": "/private/var/folders/*/*/T/*",
+      "effect": "allow",
+    },
+    {
+      "action": "external_directory",
+      "resource": "/var/folders/*/*/T/*",
+      "effect": "allow",
+    },
+
+    // Mirrors BOUNDARY_EXTRA_ROOTS in plugins/guard.ts. ~/.config/opencode is
+    // excluded on purpose: it holds guard.ts and this file.
+    {
+      "action": "external_directory",
+      "resource": "{env:HOME}/.cache/opencode/*",
+      "effect": "allow",
+    },
+    {
+      "action": "external_directory",
+      "resource": "{env:HOME}/.local/share/opencode/*",
+      "effect": "allow",
+    },
+  ],
+
+  // Coarse deny patterns; guard.ts handles flag order, nested commands and the
+  // rest of the spelling space. These fire even if the plugin fails open.
+  "policies": [
+    { "action": "tool.use", "resource": "shell:rm -rf / *", "effect": "deny" },
+    { "action": "tool.use", "resource": "shell:rm -rf ~*", "effect": "deny" },
+
+    // .env is the one hole the boundary cannot cover: it lives inside projects.
+    // guard.ts already handles shell reads; this closes the read/edit tools too.
+    { "action": "tool.use", "resource": "read:*.env*", "effect": "deny" },
+    { "action": "tool.use", "resource": "edit:*.env*", "effect": "deny" },
+    { "action": "tool.use", "resource": "read:*.env*.example", "effect": "allow" },
+    { "action": "tool.use", "resource": "edit:*.env*.example", "effect": "allow" },
+  ],
+}
