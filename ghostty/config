@@ -1,0 +1,13 @@
+# fonts
+font-size = 15
+font-family = Hack Nerd Font Mono
+font-family-bold = Hack Nerd Font Mono
+font-family-italic = Hack Nerd Font Mono
+font-family-bold-italic = Hack Nerd Font Mono
+
+font-feature = +liga
+
+# colours
+background = #000000
+
+window-decoration = "none"
