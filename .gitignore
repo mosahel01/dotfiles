@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Local tool backups and editor artifacts
+*.bak
+*.bak-*
+*.bak.*
+*.log
+.DS_Store
+
+# Secrets
+.env
+.env.*
+!.env.example
