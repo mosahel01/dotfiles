@@ -1,0 +1,81 @@
+# Reload tmux config using C-b r
+unbind r
+bind r source-file ~/.tmux.conf
+
+# Navigate between panes using VIM keys
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
+# Copy/paste VIM mode
+unbind -T copy-mode-vi Enter
+bind-key -T copy-mode-vi v send -X begin-selection
+bind-key -T copy-mode-vi y send-keys -X copy-selection
+
+# Toggle rectangular selection
+bind-key -T copy-mode-vi C-v send-keys -X rectangle-toggle
+
+# Prompt a new session
+bind S command-prompt -p "New Session:" "new-session -A -s '%%'"
+
+# Kills pane without confirmation dialog
+bind-key X kill-pane
+
+# Same as pane, but for window
+# bind-key C kill-window
+
+# Split panes and stay in the same directory
+bind-key | run-shell "tmux split-window -h -c '#{pane_current_path}'"
+bind-key - run-shell "tmux split-window -v -c '#{pane_current_path}'"
+
+# Allow using mouse
+set -g mouse on
+
+# Set vi as the mode keys (e.g., copy/paste)
+set-window-option -g mode-keys vi
+
+# Clear the scrollback buffer (C-l C-k)
+# bind-key -n C-k clear-history
+bind-key -n C-k run-shell "tmux send-keys C-l; tmux clear-history"
+
+# List of plugins
+set -g @tpm_plugins '
+    tmux-plugins/tpm \
+    tmux-plugins/tmux-sensible \
+    janoamaral/tokyo-night-tmux \
+'
+
+# Themes
+set -g @tokyo-night-tmux_transparent 1
+
+# Netspeed widget
+# set -g @tokyo-night-tmux_show_netspeed 1
+# set -g @tokyo-night-tmux_netspeed_showip 1      # Display IPv4 address (default 0)
+# set -g @tokyo-night-tmux_netspeed_refresh 1     # Update interval in seconds (default 1)
+
+# Icon styles
+set -g @tokyo-night-tmux_terminal_icon 
+set -g @tokyo-night-tmux_active_terminal_icon 
+
+# No extra spaces between icons
+set -g @tokyo-night-tmux_window_tidy_icons 0
+
+# Date and Time widget
+set -g @tokyo-night-tmux_show_datetime 0
+
+# Path widget
+set -g @tokyo-night-tmux_show_path 1
+set -g @tokyo-night-tmux_path_format relative
+
+# Number styles
+set -g @tokyo-night-tmux_window_id_style dsquare
+set -g @tokyo-night-tmux_window_id_style dsquare
+
+set -g @tokyo-night-tmux_show_git 0
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
+
+# General statusline customisation
+set -g status-position top
