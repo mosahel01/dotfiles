@@ -6,9 +6,9 @@ DOTFILES="$(cd "$(dirname "$0")" && pwd)"
 
 echo "Installing Dotfiles..."
 
-# # alacritty
-# ln -sfn "$DOTFILES/alacritty/" "$HOME/.config/"
-# echo "✓ symlinked alacritty"
+# alacritty
+ln -sfn "$DOTFILES/alacritty/" "$HOME/.config/"
+echo "✓ symlinked alacritty"
 
 # # hypr
 # ln -sfn "$DOTFILES/hypr" "$HOME/.config/hypr"

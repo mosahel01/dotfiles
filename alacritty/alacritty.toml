@@ -3,19 +3,19 @@ size = 15.0
 # offset = { x = -1, y = 1 } # x: line spacing, y: letter spacing
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "Iosevka Term"
 style = "Regular"
 
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+family = "Iosevka Term"
 style = "Bold"
 
 [font.italic]
-family = "JetBrainsMono Nerd Font"
+family = "Iosevka Term"
 style = "Italic"
 
 [font.bold_italic]
-family = "JetBrainsMono Nerd Font"
+family = "Iosevka Term"
 style = "bold_italic"
 
 [window]
