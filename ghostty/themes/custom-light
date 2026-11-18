@@ -1,0 +1,25 @@
+background = #dededd
+foreground = #1b1b18
+cursor-color = #1b1b18
+selection-background = #c0c0b9
+selection-foreground = #000000
+
+# Normal Colors (Exact RGB Invert)
+palette = 0=#dededd
+palette = 1=#078e8e
+palette = 2=#b5217f
+palette = 3=#0533ea
+palette = 4=#9f5a05
+palette = 5=#3f7b03
+palette = 6=#dd2c11
+palette = 7=#2b2b27
+
+# Bright Colors (Exact RGB Invert)
+palette = 8=#adada4
+palette = 9=#035a5a
+palette = 10=#791053
+palette = 11=#010f75
+palette = 12=#6c3a02
+palette = 13=#274b01
+palette = 14=#981706
+palette = 15=#000000
