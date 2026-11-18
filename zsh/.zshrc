@@ -2,6 +2,7 @@
 export EDITOR="nvim"
 export SUDO_EDITOR="nvim"
 export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/.go/bin:$PATH"
 export PYTHONDONTWRITEBYTECODE=1
 
@@ -79,3 +80,7 @@ source "$xdg_config_dir/.plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 # For NVM zsh support on ARCHLINUX.
 source /usr/share/nvm/init-nvm.sh
 
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/user/.local/bin:$PATH"
