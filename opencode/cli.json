@@ -20,5 +20,8 @@
   },
   "prompt": {
     "image_preview": true
+  },
+  "diffs": {
+    "view": "auto"
   }
 }
