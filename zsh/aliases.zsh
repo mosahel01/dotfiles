@@ -8,6 +8,7 @@ alias mirror="sudo reflector --protocol https --latest 20 --sort rate --save /et
 alias jc="journalctl -xe"
 alias nvim-configs="NVIM_APPNAME=nvim_configs nvim"
 alias mosahil="NVIM_APPNAME=mosahil nvim"
+alias download="curl -L -J -O "
 # alias nvim="vim"
 
 # appearance toggles
